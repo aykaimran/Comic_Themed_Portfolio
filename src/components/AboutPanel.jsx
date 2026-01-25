@@ -40,7 +40,7 @@ const AboutPanel = () => {
                             <div className="relative w-40 h-40 mb-4">
                                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-300 rounded-full blur-xl opacity-30"></div>
                                 <img
-                                    src="/mascot4.png"  // Your normal/working mascot
+                                    src="/mascot6.png"  // Your normal/working mascot
                                     alt="Developer Mascot"
                                     className="relative z-10 w-full h-full object-contain drop-shadow-lg"
                                     onError={(e) => {
@@ -49,10 +49,10 @@ const AboutPanel = () => {
                                     }}
                                 />
                                 {/* Code symbols floating around */}
-                                <div className="absolute -top-2 -left-2 font-mono bg-white border-2 border-black px-2 py-1 text-sm animate-bounce">
+                                <div className="absolute -top-2 -left-2 z-20 font-mono bg-white border-2 border-black px-2 py-1 text-sm animate-bounce">
                                     {"<div>"}
                                 </div>
-                                <div className="absolute -bottom-2 -right-2 font-mono bg-black text-white border-2 border-white px-2 py-1 text-sm animate-bounce delay-100">
+                                <div className="absolute -bottom-2 -right-2 z-20 font-mono bg-black text-white border-2 border-white px-2 py-1 text-sm animate-bounce delay-100">
                                     {"{}"}
                                 </div>
                             </div>
@@ -89,7 +89,7 @@ const AboutPanel = () => {
                             <div className="relative w-40 h-40 mb-4">
                                 <div className="absolute inset-0 bg-gradient-to-br from-red-500 to-pink-600 rounded-full blur-xl opacity-30"></div>
                                 <img
-                                    src="/mascot-superhero.png"  // Your superhero mascot
+                                    src="/mascot7.png"  // Your superhero mascot
                                     alt="Superhero Mascot"
                                     className="relative z-10 w-full h-full object-contain drop-shadow-lg"
                                     onError={(e) => {

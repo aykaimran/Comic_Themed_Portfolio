@@ -95,22 +95,22 @@ export default function AppLayout() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-full">
                   <div className="text-center border-r-2 border-gray-700 pr-4">
                     <div className="font-comic text-4xl text-comic-yellow">50+</div>
-                    <div className="font-comic text-sm uppercase text-white">PROJECTS</div>
+                    <div className="font-comic text-sm uppercase text-gray-800">PROJECTS</div>
                     <div className="text-xs text-gray-400 mt-1">COMPLETED</div>
                   </div>
                   <div className="text-center border-r-2 border-gray-700 pr-4">
                     <div className="font-comic text-4xl text-comic-red">100%</div>
-                    <div className="font-comic text-sm uppercase text-white">SUCCESS</div>
+                    <div className="font-comic text-sm uppercase text-gray-800">SUCCESS</div>
                     <div className="text-xs text-gray-400 mt-1">RATE</div>
                   </div>
                   <div className="text-center border-r-2 border-gray-700 pr-4">
                     <div className="font-comic text-4xl text-comic-blue">24/7</div>
-                    <div className="font-comic text-sm uppercase text-white">AVAILABLE</div>
+                    <div className="font-comic text-sm uppercase text-gray-800">AVAILABLE</div>
                     <div className="text-xs text-gray-400 mt-1">FOR MISSIONS</div>
                   </div>
                   <div className="text-center">
-                    <div className="font-comic text-4xl text-white">∞</div>
-                    <div className="font-comic text-sm uppercase text-white">POSSIBILITIES</div>
+                    <div className="font-comic text-5xl text-orange-900">∞</div>
+                    <div className="font-comic text-sm uppercase text-gray-800">POSSIBILITIES</div>
                     <div className="text-xs text-gray-400 mt-1">UNLOCKED</div>
                   </div>
                 </div>
