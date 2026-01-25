@@ -4,60 +4,77 @@ import ComicPanel from './ComicPanel';
 const AchievementsPanel = () => {
   const achievements = [
     {
-      title: "BUG SLAYER",
-      description: "Fixed 1000+ critical bugs in production",
-      icon: "🐛➡️💥",
+      title: "DEPARTMENT TOPPER",
+      description: "Secured 1st position in Software Engineering Department with highest GPA",
+      icon: "🥇🎓",
       level: "LEGENDARY",
-      color: "from-red-500 to-yellow-500"
+      color: "from-yellow-500 to-amber-500"
     },
     {
-      title: "CODE WIZARD",
-      description: "Reduced load times by 300% on major project",
-      icon: "⚡✨",
+      title: "MERIT SCHOLAR",
+      description: "Merit-based scholarship holder (2019 – 2023)",
+      icon: "🎖️📚",
       level: "EPIC",
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "TEAM LEADER",
-      description: "Led 5 successful projects to completion",
-      icon: "🦸‍♂️👥",
+      title: "DEAN’S HONOR LIST",
+      description: "Recognized for academic excellence (Spring 2024, Fall 2025, Spring 2025)",
+      icon: "📜✨",
       level: "RARE",
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "INNOVATOR",
-      description: "3 patents pending for unique solutions",
-      icon: "💡🚀",
-      level: "LEGENDARY",
+      title: "HIGH ACHIEVER",
+      description: "Awarded 5 High Achiever Awards across O & A Levels",
+      icon: "🏆🔥",
+      level: "EPIC",
+      color: "from-red-500 to-orange-500"
+    },
+    {
+      title: "UI/UX CERTIFIED",
+      description: "Advanced Graphic Designing & UI/UX Certification (2024)",
+      icon: "🎨🖌️",
+      level: "RARE",
       color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "LANGUAGE PROFICIENCY",
+      description: "O-Level Certificate in French Language",
+      icon: "🇫🇷🗣️",
+      level: "UNCOMMON",
+      color: "from-indigo-500 to-violet-500"
     }
   ];
 
   const skills = [
     { name: "React", level: 95, color: "bg-cyan-500" },
-    { name: "TypeScript", level: 90, color: "bg-blue-600" },
-    { name: "Node.js", level: 88, color: "bg-green-500" },
-    { name: "UI/UX", level: 85, color: "bg-pink-500" },
-    { name: "Cloud", level: 82, color: "bg-orange-500" },
-    { name: "DevOps", level: 80, color: "bg-purple-500" },
+    { name: "Node.js / Express", level: 88, color: "bg-green-500" },
+    { name: "Python (NLP / ML)", level: 85, color: "bg-yellow-500" },
+    { name: "Java / Spring Boot", level: 100, color: "bg-red-500" },
+    { name: "C / C++", level: 100, color: "bg-blue-600" },
+    { name: "Databases (SQL / PostgreSQL / MongoDB)", level: 100, color: "bg-purple-500" },
+    { name: "UI / UX & Design", level: 78, color: "bg-pink-500" },
+    { name: "Assembly Language", level: 80, color: "bg-gray-600" },
   ];
 
   return (
-    <ComicPanel 
-      title="ACHIEVEMENTS UNLOCKED" 
+    <ComicPanel
+      title="ACHIEVEMENTS UNLOCKED"
       variant="action"
       className="bg-gradient-to-br from-yellow-50 to-amber-50 h-full"
     >
       <div className="relative z-10 h-full p-4">
+
         {/* Achievements Grid */}
         <div className="grid grid-cols-2 gap-3 mb-6">
           {achievements.map((ach, index) => (
-            <div 
+            <div
               key={index}
               className={`bg-gradient-to-br ${ach.color} border-4 border-black p-3 shadow-comic-sm hover:shadow-comic-lg transition-all duration-300 hover:scale-105`}
             >
               <div className="text-3xl mb-2 text-center">{ach.icon}</div>
-              <h4 className="font-comic text-lg uppercase text-white text-center text-stroke-thin mb-1">
+              <h4 className="font-comic text-lg uppercase text-white text-center mb-1">
                 {ach.title}
               </h4>
               <p className="text-xs text-white/90 text-center mb-2">
@@ -75,8 +92,9 @@ const AchievementsPanel = () => {
         {/* Skills Section */}
         <div className="mb-4">
           <div className="font-comic text-xl uppercase mb-3 text-center bg-black text-white py-2 border-2 border-comic-yellow">
-            POWER LEVELS
+            SKILL POWER LEVELS
           </div>
+
           <div className="space-y-3">
             {skills.map((skill, index) => (
               <div key={index} className="group">
@@ -85,36 +103,43 @@ const AchievementsPanel = () => {
                   <span className="font-bold text-sm">{skill.level}%</span>
                 </div>
                 <div className="h-4 bg-gray-300 border-2 border-black overflow-hidden">
-                  <div 
-                    className={`h-full ${skill.color} transition-all duration-1000 ease-out group-hover:animate-pulse`}
+                  <div
+                    className={`h-full ${skill.color} transition-all duration-1000 ease-out`}
                     style={{ width: `${skill.level}%` }}
-                  >
-                    <div className="h-full bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shine"></div>
-                  </div>
+                  />
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* XP Progress Bar */}
+        {/* XP Progress */}
         <div className="mt-4 p-3 bg-gradient-to-r from-gray-900 to-black border-4 border-yellow-500">
           <div className="flex justify-between items-center mb-2">
-            <span className="font-comic text-yellow-300">DEVELOPER XP</span>
-            <span className="font-comic text-white">LEVEL 99</span>
+            <span className="font-comic text-yellow-300">CAREER XP</span>
+            <span className="font-comic text-white">SOFTWARE ENGINEER (IN PROGRESS)</span>
           </div>
+
           <div className="h-6 bg-gray-800 border-2 border-yellow-600 overflow-hidden">
-            <div className="h-full bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400 animate-pulse"
-                 style={{ width: '95%' }}>
+            <div
+              className="h-full bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400"
+              style={{ width: '72%' }}
+            >
               <div className="h-full flex items-center justify-end pr-2">
-                <span className="font-comic text-xs text-black font-bold">950,000/1,000,000 XP</span>
+                <span className="font-comic text-xs text-black font-bold">
+                  FAST-NUCES | 6th Semester
+                </span>
               </div>
             </div>
           </div>
+
           <div className="text-center mt-2">
-            <span className="font-comic text-xs text-yellow-300">NEXT LEVEL: CODE SENSEI</span>
+            <span className="font-comic text-xs text-yellow-300">
+              NEXT UNLOCK: FULL-TIME SOFTWARE ENGINEER 🚀
+            </span>
           </div>
         </div>
+
       </div>
     </ComicPanel>
   );

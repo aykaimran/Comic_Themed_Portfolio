@@ -3,73 +3,81 @@ import ComicPanel from './ComicPanel';
 
 const ProjectsPanel = () => {
   const projects = [
-    {
-      id: 1,
-      title: "PROJECT NEXUS",
-      type: "Full-Stack Platform",
-      description: "A revolutionary dashboard connecting multiple APIs",
-      status: "ACTIVE",
-      tech: ["React", "Node.js", "MongoDB", "Socket.io"],
-      impact: "Used by 10K+ users daily",
-      mascot: "/mascot-laptop.png",  // Mascot working on laptop
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      id: 2,
-      title: "CRYPTO FORTRESS",
-      type: "Blockchain Security",
-      description: "Secure cryptocurrency wallet with military-grade encryption",
-      status: "COMPLETED",
-      tech: ["Solidity", "Web3.js", "React Native", "AWS"],
-      impact: "$5M+ secured",
-      mascot: "/mascot-secure.png",  // Mascot with shield/lock
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      id: 3,
-      title: "AI ARTISAN",
-      type: "Machine Learning",
-      description: "Generative AI for creating digital art and designs",
-      status: "IN PROGRESS",
-      tech: ["Python", "TensorFlow", "FastAPI", "Docker"],
-      impact: "Generated 50K+ artworks",
-      mascot: "/mascot-thinking.png",  // Thinking/creative mascot
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      id: 4,
-      title: "ECO TRACKER",
-      type: "IoT Solution",
-      description: "Real-time environmental monitoring system",
-      status: "DEPLOYED",
-      tech: ["IoT", "React", "GraphQL", "Azure"],
-      impact: "Reduced carbon by 15%",
-      mascot: "/mascot-nature.png",  // Mascot with plants/nature
-      color: "from-green-400 to-teal-500"
-    },
-    {
-      id: 5,
-      title: "GAME HAVEN",
-      type: "Gaming Platform",
-      description: "Multiplayer gaming platform with social features",
-      status: "ACTIVE",
-      tech: ["Unity", "C#", "WebSocket", "Redis"],
-      impact: "100K+ downloads",
-      mascot: "/mascot-gaming.png",  // Gaming mascot
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      id: 6,
-      title: "HEALTH GUARDIAN",
-      type: "Health Tech",
-      description: "Telemedicine platform with AI diagnostics",
-      status: "PLANNED",
-      tech: ["Next.js", "Python", "Firebase", "ML"],
-      impact: "Coming Soon",
-      mascot: "/mascot-medical.png",  // Medical/health mascot
-      color: "from-red-400 to-pink-500"
+  {
+    id: 1,
+    title: "MEDIPREDICT",
+    type: "AI / NLP System",
+    description:
+      "An NLP-powered system that analyzes patient reports and predicts diseases with descriptions and recommended medicines.",
+    status: "COMPLETED",
+    tech: ["Python", "BERT", "NLP", "Machine Learning"],
+    impact: "Automated disease prediction from reports",
+    mascot: "/mascot-medical.png",
+    color: "from-red-400 to-pink-500"
+  },
+  {
+    id: 2,
+    title: "LOGISIM",
+    type: "Desktop Application",
+    description:
+      "A logic circuit simulator allowing users to design, simulate, and export circuits with truth tables and Boolean expressions.",
+    status: "COMPLETED",
+    tech: ["Java", "Java Swing", "PostgreSQL"],
+    impact: "Interactive learning for digital logic",
+    mascot: "/mascot-circuit.png",
+    color: "from-indigo-500 to-purple-500"
+  },
+  {
+    id: 3,
+    title: "RENTINEL",
+    type: "Full-Stack Web App",
+    description:
+      "A management system for rent tracking, lease handling, and tenant-landlord communication.",
+    status: "COMPLETED",
+    tech: ["React", "Spring Boot", "Java"],
+    impact: "Simplified property management",
+    mascot: "/mascot-building.png",
+    color: "from-blue-500 to-cyan-500"
+  },
+  {
+    id: 4,
+    title: "AI RESUME MAKER",
+    type: "AI Full-Stack Platform",
+    description:
+      "AI-powered resume builder with real-time preview, PDF export, authentication, and content generation.",
+    status: "COMPLETED",
+    tech: ["React", "TypeScript", "Node.js", "MongoDB", "Flask", "Ollama"],
+    impact: "Automated resume creation with AI",
+    mascot: "/mascot-laptop.png",
+    color: "from-orange-500 to-red-500"
+  },
+  {
+    id: 5,
+    title: "PEAKSAVER",
+    type: "Desktop Application",
+    description:
+      "A C++ application that tracks electricity usage and optimizes peak and off-peak consumption.",
+    status: "COMPLETED",
+    tech: ["C++", "SQL", ".NET Framework"],
+    impact: "Optimized household energy usage",
+    mascot: "/mascot-energy.png",
+    color: "from-yellow-400 to-amber-500"
+  },
+   {
+      id: 7,
+      title: "FINAL YEAR PROJECT",
+      type: "Capstone / Research Project",
+      description:
+        "A large-scale final year project focused on advanced problem-solving and real-world impact. Project details are intentionally kept confidential.",
+      status: "IN_PROGRESS",
+      tech: ["AI", "Full-Stack", "Research", "System Design"],
+      impact: "Confidential — to be revealed upon completion",
+      mascot: "/mascot-secret.png",
+      color: "from-gray-700 to-black"
     }
-  ];
+  
+];
+
 
   const [filter, setFilter] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
@@ -105,7 +113,7 @@ const ProjectsPanel = () => {
       <div className="relative z-10 p-4 md:p-6">
         {/* Filter Tabs */}
         <div className="flex flex-wrap gap-2 mb-6 justify-center">
-          {['all', 'active', 'completed', 'in progress', 'deployed', 'planned'].map((filterType) => (
+          {['all', 'completed', 'in progress', 'deployed'].map((filterType) => (
             <button
               key={filterType}
               onClick={() => setFilter(filterType)}
