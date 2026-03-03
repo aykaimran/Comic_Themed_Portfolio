@@ -30,7 +30,7 @@ const ExperiencePanel = () => {
       description:
         "Assisting students in Assembly Language labs, debugging low-level logic, and strengthening core computing concepts.",
       skills: ["Assembly Language", "Computer Architecture", "Debugging"],
-      mascot: "/mascot-lab.png",
+      mascot: "/Mern_stack_Mascot.png",
       color: "from-green-500 to-teal-500"
     },
     {
@@ -40,7 +40,7 @@ const ExperiencePanel = () => {
       description:
         "Supporting Digital Logic Design and Database courses by grading assessments and helping students.",
       skills: ["Digital Logic Design", "Database Management", "Assessment"],
-      mascot: "/mascot-circuit.png",
+      mascot: "/Teacher_Mascot.png",
       color: "from-yellow-500 to-amber-500"
     }
   ];
