@@ -71,7 +71,7 @@ const HomePanel = () => {
             {/* Main mascot image */}
             <div className="relative z-10 w-full h-full">
               <img
-                src="/mascot2.png"
+                src="/Comic_Themed_Portfolio/mascot2.png"
                 alt="Mascot Hero"
                 className="w-full h-full object-contain drop-shadow-2xl animate-float"
                 onError={(e) => {
