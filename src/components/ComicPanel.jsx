@@ -58,7 +58,7 @@ const ComicPanel = ({ children, className = "", title, variant = "normal" }) => 
         {children}
       </div>
       
-      {/* Panel Number (Optional) */}
+      {/* Panel Number */}
       <div className="absolute bottom-1 right-1 font-comic text-xs text-gray-400 opacity-70">
         {Math.floor(Math.random() * 9) + 1}
       </div>
