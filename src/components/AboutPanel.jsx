@@ -41,7 +41,7 @@ const AboutPanel = () => {
                             <div className="relative w-40 h-40 mb-4">
                                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-300 rounded-full blur-xl opacity-30"></div>
                                 <img
-                                    src="/mascot6.png" 
+                                    src="/Comic_Themed_Portfolio/mascot6.png" 
                                     alt="Developer Mascot"
                                     className="relative z-10 w-full h-full object-contain drop-shadow-lg"
                                     onError={(e) => {
@@ -90,7 +90,7 @@ const AboutPanel = () => {
                             <div className="relative w-40 h-40 mb-4">
                                 <div className="absolute inset-0 bg-gradient-to-br from-red-500 to-pink-600 rounded-full blur-xl opacity-30"></div>
                                 <img
-                                    src="/mascot7.png" 
+                                    src="/Comic_Themed_Portfolio/mascot7.png" 
                                     alt="Superhero Mascot"
                                     className="relative z-10 w-full h-full object-contain drop-shadow-lg"
                                     onError={(e) => {
@@ -194,7 +194,7 @@ const AboutPanel = () => {
                         <div className="relative animate-in fade-in zoom-in duration-500 flex flex-col items-center">
                             <div className="relative bg-white border-4 border-black p-2 shadow-comic-sm transform -rotate-2">
                                 <img
-                                    src="/mascot9.png" 
+                                    src="/Comic_Themed_Portfolio/mascot9.png" 
                                     alt="Real Identity"
                                     className="w-48 h-64 object-cover border-2 border-black"
                                 />

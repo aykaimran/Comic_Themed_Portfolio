@@ -7,5 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
+    
   ],
+  base: "/Comic_Themed_Portfolio/",
 })
