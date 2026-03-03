@@ -238,9 +238,7 @@ body {
 }
 
 
-.comic-hover-shake:hover {
-  animation: bam 0.6s ease-out;
-}
+
 
 /* Comic Grid Lines */
 .comic-gutter {

@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ComicPanel from './ComicPanel';
 
 const AboutPanel = () => {
+    const [isRevealed, setIsRevealed] = useState(false);
     return (
         <ComicPanel title="THE ORIGIN STORY" className="bg-gradient-to-br from-blue-50 via-cyan-50 to-purple-50 h-full">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-5"
-                 style={{
-                   backgroundImage: 'radial-gradient(circle at 2px 2px, #00aeef 2px, transparent 0)',
-                   backgroundSize: '30px 30px'
-                 }}>
+                style={{
+                    backgroundImage: 'radial-gradient(circle at 2px 2px, #00aeef 2px, transparent 0)',
+                    backgroundSize: '30px 30px'
+                }}>
             </div>
 
             <div className="relative z-10 p-4 md:p-6 h-full flex flex-col">
@@ -20,7 +21,7 @@ const AboutPanel = () => {
                             <span className="font-comic text-lg">💬</span>
                         </div>
                         <p className="font-comic text-2xl md:text-3xl lg:text-4xl font-bold uppercase italic text-center text-comic-black leading-tight">
-                            "It all started with<br/>
+                            "It all started with<br />
                             <span className="text-comic-red">a single line of code...</span>"
                         </p>
                     </div>
@@ -35,7 +36,7 @@ const AboutPanel = () => {
                                 🌞 BY DAY
                             </div>
                         </div>
-                        
+
                         <div className="flex-grow flex flex-col items-center justify-center">
                             <div className="relative w-40 h-40 mb-4">
                                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-300 rounded-full blur-xl opacity-30"></div>
@@ -56,18 +57,18 @@ const AboutPanel = () => {
                                     {"{}"}
                                 </div>
                             </div>
-                            
+
                             <div className="text-center">
                                 <h3 className="font-comic text-2xl md:text-3xl text-comic-black mb-2">
                                     <span className="font-bold text-comic-blue underline decoration-4 decoration-comic-yellow">Developer</span>
                                 </h3>
                                 <p className="font-comic text-lg text-gray-700">
-                                    Crafting elegant solutions<br/>
+                                    Crafting elegant solutions<br />
                                     with clean, semantic code
                                 </p>
                             </div>
                         </div>
-                        
+
                         <div className="mt-4 flex flex-wrap gap-2 justify-center">
                             {['React', 'TypeScript', 'Node.js', 'UI/UX'].map((skill, i) => (
                                 <span key={i} className="font-comic text-xs bg-blue-100 border-2 border-blue-400 px-3 py-1">
@@ -84,7 +85,7 @@ const AboutPanel = () => {
                                 🌙 BY NIGHT
                             </div>
                         </div>
-                        
+
                         <div className="flex-grow flex flex-col items-center justify-center">
                             <div className="relative w-40 h-40 mb-4">
                                 <div className="absolute inset-0 bg-gradient-to-br from-red-500 to-pink-600 rounded-full blur-xl opacity-30"></div>
@@ -105,18 +106,18 @@ const AboutPanel = () => {
                                     BAM!
                                 </div>
                             </div>
-                            
+
                             <div className="text-center">
                                 <h3 className="font-comic text-2xl md:text-3xl text-white text-stroke-thin mb-2">
-                                    <span className="text-yellow-300">BUG-SQUASHING<br/>SUPERHERO!</span>
+                                    <span className="text-yellow-300">BUG-SQUASHING<br />SUPERHERO!</span>
                                 </h3>
                                 <p className="font-comic text-lg text-gray-300">
-                                    Battling bugs &<br/>
+                                    Battling bugs &<br />
                                     saving the digital world
                                 </p>
                             </div>
                         </div>
-                        
+
                         <div className="mt-4 flex flex-wrap gap-2 justify-center">
                             {['Debugging', 'Optimization', 'Security', 'Problem-Solving'].map((power, i) => (
                                 <span key={i} className="font-comic text-xs bg-red-900 border-2 border-red-600 text-white px-3 py-1">
@@ -143,25 +144,25 @@ const AboutPanel = () => {
                                 />
                             </div>
                         </div>
-                        
+
                         <div className="text-center md:text-left flex-grow">
                             <h4 className="font-comic text-2xl md:text-3xl text-black uppercase mb-2">
                                 MISSION STATEMENT
                             </h4>
                             <p className="font-comic text-xl text-gray-800">
-                                Turning <span className="font-bold text-brown-800">caffeine</span> into clean, semantic code.<br/>
+                                Turning <span className="font-bold text-brown-800">caffeine</span> into clean, semantic code.<br />
                                 <span className="font-bold text-comic-red">Saving the web one div at a time!</span>
                                 <span className="ml-2 animate-pulse">💥</span>
                             </p>
                         </div>
-                        
+
                         <div className="flex-shrink-0">
                             <div className="font-comic text-4xl animate-bounce">
                                 🚀
                             </div>
                         </div>
                     </div>
-                    
+
                     {/* Stats Bar */}
                     <div className="mt-4 grid grid-cols-3 gap-2 text-center">
                         <div className="bg-white border-2 border-black p-2">
@@ -181,9 +182,35 @@ const AboutPanel = () => {
 
                 {/* Secret Identity Reveal (Small Easter Egg) */}
                 <div className="mt-4 text-center">
-                    <button className="font-comic text-sm bg-black/10 border-2 border-dashed border-gray-400 px-4 py-2 text-gray-600 hover:bg-black/20 transition-colors">
-                        🔍 Click to reveal secret identity...
-                    </button>
+                    {!isRevealed ? (
+                        /* The Button - Shown when isRevealed is false */
+                        <button
+                            onClick={() => setIsRevealed(true)}
+                            className="font-comic text-sm bg-black/10 border-2 border-dashed border-gray-400 px-4 py-2 text-gray-600 hover:bg-black/20 transition-all hover:scale-105 active:scale-95"
+                        >
+                            🔍 Click to reveal secret identity...
+                        </button>
+                    ) : (
+                        /* The Revealed Image - Shown when isRevealed is true */
+                        <div className="relative animate-in fade-in zoom-in duration-500 flex flex-col items-center">
+                            <div className="relative bg-white border-4 border-black p-2 shadow-comic-sm transform -rotate-2">
+                                <img
+                                    src="/mascot9.png" // Path to your actual photo
+                                    alt="Real Identity"
+                                    className="w-48 h-64 object-cover border-2 border-black"
+                                />
+                                <div className="absolute -top-3 -right-3 bg-comic-red text-white text-xs font-bold px-2 py-1 border-2 border-black rotate-12">
+                                    IT'S ME!
+                                </div>
+                            </div>
+                            <button
+                                onClick={() => setIsRevealed(false)}
+                                className="mt-2 font-comic text-xs text-gray-500 underline hover:text-comic-red"
+                            >
+                                Hide again...
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
         </ComicPanel>

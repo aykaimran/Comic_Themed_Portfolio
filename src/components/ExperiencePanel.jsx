@@ -10,7 +10,7 @@ const ExperiencePanel = () => {
       description:
         "Built admin dashboards and backend REST APIs. Integrated AI-powered resume generation using MERN stack with Flask + Ollama.",
       skills: ["React", "Node.js", "Express", "MongoDB", "Flask", "Ollama"],
-      mascot: "/mascot-superhero.png",
+      mascot: "/Mern_stack_Mascot.png",
       color: "from-red-500 to-orange-500"
     },
     {
@@ -20,7 +20,7 @@ const ExperiencePanel = () => {
       description:
         "Teaching C++ fundamentals and web development, guiding young minds through logic, problem-solving, and coding best practices.",
       skills: ["C++", "HTML", "CSS", "JavaScript", "Teaching"],
-      mascot: "/mascot-teacher.png",
+      mascot: "/Teacher_Mascot.png",
       color: "from-blue-500 to-purple-500"
     },
     {

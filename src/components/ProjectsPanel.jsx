@@ -12,7 +12,7 @@ const ProjectsPanel = () => {
     status: "COMPLETED",
     tech: ["Python", "BERT", "NLP", "Machine Learning"],
     impact: "Automated disease prediction from reports",
-    mascot: "/mascot-medical.png",
+    mascot: "/mascot10.png",
     color: "from-red-400 to-pink-500"
   },
   {
