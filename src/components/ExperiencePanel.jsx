@@ -10,7 +10,7 @@ const ExperiencePanel = () => {
       description:
         "Built admin dashboards and backend REST APIs. Integrated AI-powered resume generation using MERN stack with Flask + Ollama.",
       skills: ["React", "Node.js", "Express", "MongoDB", "Flask", "Ollama"],
-      mascot: "/Mern_stack_Mascot.png",
+      mascot: "/Comic_Themed_Portfolio/Mern_stack_Mascot.png",
       color: "from-red-500 to-orange-500"
     },
     {
@@ -20,7 +20,7 @@ const ExperiencePanel = () => {
       description:
         "Teaching C++ fundamentals and web development, guiding young minds through logic, problem-solving, and coding best practices.",
       skills: ["C++", "HTML", "CSS", "JavaScript", "Teaching"],
-      mascot: "/Teacher_Mascot.png",
+      mascot: "/Comic_Themed_Portfolio/Teacher_Mascot.png",
       color: "from-blue-500 to-purple-500"
     },
     {
@@ -30,7 +30,7 @@ const ExperiencePanel = () => {
       description:
         "Assisting students in Assembly Language labs, debugging low-level logic, and strengthening core computing concepts.",
       skills: ["Assembly Language", "Computer Architecture", "Debugging"],
-      mascot: "/Mern_stack_Mascot.png",
+      mascot: "/Comic_Themed_Portfolio/Mern_stack_Mascot.png",
       color: "from-green-500 to-teal-500"
     },
     {
@@ -40,7 +40,7 @@ const ExperiencePanel = () => {
       description:
         "Supporting Digital Logic Design and Database courses by grading assessments and helping students.",
       skills: ["Digital Logic Design", "Database Management", "Assessment"],
-      mascot: "/Teacher_Mascot.png",
+      mascot: "/Comic_Themed_Portfolio/Teacher_Mascot.png",
       color: "from-yellow-500 to-amber-500"
     }
   ];
