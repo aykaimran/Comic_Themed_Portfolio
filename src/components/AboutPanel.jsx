@@ -164,18 +164,18 @@ const AboutPanel = () => {
                     </div>
 
                     {/* Stats Bar */}
-                    <div className="mt-4 grid grid-cols-3 gap-2 text-center">
+                    <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-2 text-center">
                         <div className="bg-white border-2 border-black p-2">
                             <div className="font-comic text-2xl text-comic-blue">1000+</div>
-                            <div className="font-comic text-xs uppercase">Bugs Squashed</div>
+                            <div className="font-comic text-xs uppercase font-bold">Bugs Squashed</div>
                         </div>
                         <div className="bg-white border-2 border-black p-2">
                             <div className="font-comic text-2xl text-comic-red">50+</div>
-                            <div className="font-comic text-xs uppercase">Projects</div>
+                            <div className="font-comic text-xs uppercase font-bold">Projects</div>
                         </div>
                         <div className="bg-white border-2 border-black p-2">
                             <div className="font-comic text-2xl text-comic-yellow">∞</div>
-                            <div className="font-comic text-xs uppercase">Cups of Coffee</div>
+                            <div className="font-comic text-xs uppercase font-bold">Cups of Coffee</div>
                         </div>
                     </div>
                 </div>

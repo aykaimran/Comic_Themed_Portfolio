@@ -35,11 +35,11 @@ const ExperiencePanel = () => {
     },
     {
       year: "Aug 2025 – Present",
-      title: "TEACHING ASSISTANT",
+      title: "TEACHER ASSISTANT",
       company: "FAST-NUCES · Lahore",
       description:
-        "Supporting Digital Logic Design and Database courses by grading assessments and helping students.",
-      skills: ["Digital Logic Design", "Database Management", "Assessment"],
+        "Assist students in understanding Database, Assembly Language and Digital Logic Design concepts.",
+      skills: ["Database", "Assembly Language", "Digital Logic Design"],
       mascot: "/Comic_Themed_Portfolio/Teacher_Mascot.png",
       color: "from-yellow-500 to-amber-500"
     }
@@ -74,24 +74,24 @@ const ExperiencePanel = () => {
         }}
       />
 
-      <div className="relative z-10 h-full p-4 md:p-6">
+      <div className="relative z-10 h-full p-3 sm:p-4 md:p-6">
         {/* Timeline Container */}
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-8 top-0 bottom-0 w-2 bg-gradient-to-b from-comic-red via-comic-yellow to-comic-blue border-2 border-black" />
+          <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-2 bg-gradient-to-b from-comic-red via-comic-yellow to-comic-blue border-2 border-black" />
 
-          <div className="space-y-8 ml-12">
+          <div className="space-y-8 ml-6 sm:ml-12">
             {visibleExperiences.map((exp, index) => (
               <div key={index} className="relative group">
                 {/* Timeline Node */}
-                <div className="absolute -left-14 top-6 w-8 h-8 bg-white border-4 border-black rounded-full z-10 group-hover:scale-125 transition-transform" />
+                <div className="absolute -left-[28px] sm:-left-14 top-6 w-6 h-6 sm:w-8 sm:h-8 bg-white border-4 border-black rounded-full z-10 group-hover:scale-125 transition-transform" />
 
                 {/* Card */}
                 <div className="bg-white border-4 border-black p-4 shadow-comic-sm hover:shadow-comic-lg transition-all duration-300 group-hover:-translate-x-2 animate-[flipIn_0.4s_ease]">
                   <div className="flex flex-col md:flex-row gap-4">
                     {/* Mascot */}
                     <div className="md:w-1/4 flex-shrink-0">
-                      <div className="relative w-24 h-24 mx-auto">
+                      <div className="relative w-20 h-20 sm:w-24 sm:h-24 mx-auto">
                         <div
                           className={`absolute inset-0 bg-gradient-to-br ${exp.color} opacity-30 rounded-full blur-md`}
                         />
@@ -119,7 +119,7 @@ const ExperiencePanel = () => {
                         </span>
                       </div>
 
-                      <p className="text-gray-600 mb-3">
+                      <p className="text-gray-600 mb-3 text-sm sm:text-base">
                         {exp.description}
                       </p>
 

@@ -8,6 +8,8 @@ const ContactPanel = () => {
     mission: '',
     urgency: 'normal'
   });
+  const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const contacts = [
     {
@@ -44,11 +46,41 @@ const ContactPanel = () => {
     }
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Mission brief submitted:', formData);
-    alert("📬 MISSION BRIEF TRANSMITTED! I'll contact you soon!");
-    setFormData({ name: '', email: '', mission: '', urgency: 'normal' });
+    setIsLoading(true);
+    
+    // Create FormData object from the form data
+    const formDataToSend = new FormData();
+    formDataToSend.append('name', formData.name);
+    formDataToSend.append('email', formData.email);
+    formDataToSend.append('message', formData.mission);
+    formDataToSend.append('_subject', `New Mission Brief from ${formData.name}`);
+    formDataToSend.append('_replyto', formData.email);
+
+    try {
+      // Using FormSubmit.co - works with static sites on GitHub Pages
+      await fetch('https://formsubmit.co/ajax/aykaimran28@gmail.com', {
+        method: 'POST',
+        body: formDataToSend,
+      });
+
+      setSubmitted(true);
+      // Reset form
+      setFormData({ name: '', email: '', mission: '', urgency: 'normal' });
+      
+      // Hide success message after 5 seconds
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch (error) {
+      alert("📬 TRANSMISSION FAILED! Please try again or contact me directly via email.");
+      console.error(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
@@ -124,36 +156,51 @@ const ContactPanel = () => {
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
+              name="name"
               placeholder="Your hero name..."
               value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              onChange={handleChange}
               className="w-full border-2 border-black p-2 font-comic"
               required
             />
 
             <input
               type="email"
+              name="email"
               placeholder="email@example.com"
               value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              onChange={handleChange}
               className="w-full border-2 border-black p-2 font-comic"
               required
             />
 
             <textarea
+              name="mission"
               placeholder="Describe your mission..."
               value={formData.mission}
-              onChange={(e) => setFormData({ ...formData, mission: e.target.value })}
+              onChange={handleChange}
               className="w-full h-32 border-2 border-black p-2 font-comic"
               required
             />
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-comic-red to-red-600 text-white font-comic text-xl py-3 border-4 border-black hover:scale-105 transition-all"
+              disabled={isLoading}
+              className={`w-full bg-gradient-to-r from-comic-red to-red-600 text-white font-comic text-xl py-3 border-4 border-black transition-all ${
+                isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105'
+              }`}
             >
-              TRANSMIT MISSION BRIEF
+              {isLoading ? '📡 TRANSMITTING...' : '📬 TRANSMIT MISSION BRIEF'}
             </button>
+
+            {submitted && (
+              <div className="mt-4 p-3 bg-green-100 border-4 border-green-500 text-center font-comic">
+                <span className="text-green-700">✅ MISSION BRIEF RECEIVED!</span>
+                <span className="block text-sm text-green-600 mt-1">
+                  I'll contact you soon, hero!
+                </span>
+              </div>
+            )}
           </form>
         </div>
       </div>

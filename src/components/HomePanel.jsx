@@ -52,7 +52,7 @@ const HomePanel = () => {
               START ADVENTURE!
             </button>
             <a
-              href="/Ayka Imran Resume AI.pdf"
+              href="/Comic_Themed_Portfolio/Ayka Imran Resume AI.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="font-comic text-xl bg-comic-blue text-white border-4 border-black px-6 py-3 shadow-comic-sm hover:shadow-comic-lg hover:scale-105 transition-all uppercase tracking-wider inline-block"

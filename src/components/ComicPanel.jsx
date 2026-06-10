@@ -54,7 +54,7 @@ const ComicPanel = ({ children, className = "", title, variant = "normal" }) => 
            }}>
       </div>
       
-      <div className="relative z-0 h-full w-full p-2">
+      <div className={`relative z-0 h-full w-full p-2 ${title ? 'pt-14 sm:pt-12' : ''}`}>
         {children}
       </div>
       
