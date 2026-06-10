@@ -10,7 +10,7 @@ const ProjectsPanel = () => {
       year: "2026 – Present",
       description:
         "Built AI plant disease detector achieving 88.6% accuracy on 20,000+ leaf images and extracted 55 features (shape, texture, color, edge) for disease classification. Implemented PCA for dimensionality reduction and model optimization and created web interface for real-time leaf image diagnosis.",
-      status: "IN_PROGRESS",
+      status: "COMPLETED",
       tech: ["Python", "Scikit-learn", "OpenCV", "SVM", "Random Forest", "XGBoost"],
       impact: "Achieved 88.6% accuracy on 20k+ images",
       color: "from-green-500 to-emerald-600"
