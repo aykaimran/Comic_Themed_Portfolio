@@ -22,9 +22,9 @@ const HomePanel = () => {
         <div className="md:w-1/2 p-4 md:p-8">
           {/* Speech Bubble */}
           <div className="relative bg-white border-4 border-comic-black p-6 md:p-8 rounded-[40px] mb-8 max-w-lg shadow-comic-lg transform -rotate-2 hover:rotate-0 transition-transform duration-500">
-            <h1 className="font-comic text-4xl md:text-6xl lg:text-7xl text-comic-black leading-[0.9] text-stroke tracking-wide mb-4">
+            <h1 className="font-comic text-4xl md:text-6xl lg:text-7xl text-comic-black leading-[0.9] tracking-wide mb-4">
               THE ADVENTURES OF
-              <span className="text-comic-red block mt-2 drop-shadow-md">Ayka Imran</span>
+              <span className="text-comic-red block mt-2 text-stroke drop-shadow-md">Ayka Imran</span>
             </h1>
             <p className="font-comic text-xl md:text-2xl text-gray-700 mt-4">
               Full-Stack Developer & Digital Crusader

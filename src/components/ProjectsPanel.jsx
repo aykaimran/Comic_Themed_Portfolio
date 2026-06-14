@@ -241,7 +241,7 @@ const ProjectsPanel = () => {
           <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4 backdrop-blur-xs">
             <div className="bg-white border-6 sm:border-8 border-black max-w-2xl w-full p-6 shadow-comic-lg sm:shadow-comic-xl relative max-h-[90vh] overflow-y-auto">
               <div className="flex justify-between items-start mb-4">
-                <h3 className="font-comic text-3xl uppercase text-stroke-sm text-comic-black">{selectedProject.title}</h3>
+                <h3 className="font-comic text-3xl uppercase text-comic-black">{selectedProject.title}</h3>
                 <button 
                   onClick={() => setSelectedProject(null)}
                   className="font-comic text-2xl bg-comic-red text-white w-10 h-10 border-4 border-black hover:bg-black hover:text-comic-red transition-colors flex items-center justify-center cursor-pointer"

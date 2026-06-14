@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { MessageSquare, Sun, Moon, Zap, Rocket, Search } from 'lucide-react';
 import ComicPanel from './ComicPanel';
 
 const AboutPanel = () => {
@@ -18,7 +19,7 @@ const AboutPanel = () => {
                 <div className="mb-6 md:mb-8">
                     <div className="relative bg-white border-4 border-comic-black shadow-comic-lg p-4 md:p-6 transform -rotate-1 hover:rotate-0 transition-transform duration-500 max-w-2xl mx-auto">
                         <div className="absolute -top-4 -left-4 w-8 h-8 bg-comic-yellow border-4 border-black rounded-full flex items-center justify-center">
-                            <span className="font-comic text-lg">💬</span>
+                            <MessageSquare className="w-5 h-5 text-black" strokeWidth={2.5} />
                         </div>
                         <p className="font-comic text-2xl md:text-3xl lg:text-4xl font-bold uppercase italic text-center text-comic-black leading-tight">
                             "It all started with<br />
@@ -33,7 +34,10 @@ const AboutPanel = () => {
                     <div className="bg-gradient-to-br from-white to-blue-50 border-4 border-comic-blue shadow-comic-sm p-4 md:p-6 flex flex-col">
                         <div className="mb-4 text-center">
                             <div className="inline-block bg-comic-blue text-white font-comic text-lg uppercase px-4 py-2 border-2 border-black mb-3">
-                                🌞 BY DAY
+                                <span className="flex items-center gap-1.5 justify-center">
+                                    <Sun className="w-5 h-5 text-yellow-300 fill-yellow-300" strokeWidth={2.5} />
+                                    BY DAY
+                                </span>
                             </div>
                         </div>
 
@@ -46,7 +50,7 @@ const AboutPanel = () => {
                                     className="relative z-10 w-full h-full object-contain drop-shadow-lg"
                                     onError={(e) => {
                                         e.target.onerror = null;
-                                        e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Ccircle cx='80' cy='80' r='80' fill='%2300aeef'/%3E%3Ctext x='50%25' y='50%25' font-family='Comic Sans MS' font-size='48' text-anchor='middle' dy='.3em' fill='white'%3E👨‍💻%3C/text%3E%3C/svg%3E";
+                                        e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Ccircle cx='80' cy='80' r='80' fill='%2300aeef'/%3E%3Ctext x='50%25' y='48%25' font-family='Comic Sans MS' font-weight='bold' font-size='56' text-anchor='middle' dy='.3em' fill='white'%3E&lt;/&gt;%3C/text%3E%3C/svg%3E";
                                     }}
                                 />
                                 {/* Code symbols floating around */}
@@ -82,7 +86,10 @@ const AboutPanel = () => {
                     <div className="bg-gradient-to-br from-black to-gray-900 border-4 border-comic-red shadow-comic-sm p-4 md:p-6 flex flex-col">
                         <div className="mb-4 text-center">
                             <div className="inline-block bg-comic-red text-white font-comic text-lg uppercase px-4 py-2 border-2 border-white mb-3">
-                                🌙 BY NIGHT
+                                <span className="flex items-center gap-1.5 justify-center">
+                                    <Moon className="w-5 h-5 text-yellow-200 fill-yellow-200" strokeWidth={2.5} />
+                                    BY NIGHT
+                                </span>
                             </div>
                         </div>
 
@@ -95,7 +102,7 @@ const AboutPanel = () => {
                                     className="relative z-10 w-full h-full object-contain drop-shadow-lg"
                                     onError={(e) => {
                                         e.target.onerror = null;
-                                        e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Ccircle cx='80' cy='80' r='80' fill='%23ea3323'/%3E%3Ctext x='50%25' y='50%25' font-family='Comic Sans MS' font-size='48' text-anchor='middle' dy='.3em' fill='white'%3E🦸%3C/text%3E%3C/svg%3E";
+                                        e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Ccircle cx='80' cy='80' r='80' fill='%23ea3323'/%3E%3Ctext x='50%25' y='48%25' font-family='Comic Sans MS' font-weight='bold' font-size='38' text-anchor='middle' dy='.3em' fill='white'%3EHERO%3C/text%3E%3C/svg%3E";
                                     }}
                                 />
                                 {/* Action words */}
@@ -139,7 +146,7 @@ const AboutPanel = () => {
                                     className="w-full h-full object-contain animate-float"
                                     onError={(e) => {
                                         e.target.onerror = null;
-                                        e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23fbb03b'/%3E%3Ctext x='50%25' y='50%25' font-family='Comic Sans MS' font-size='32' text-anchor='middle' dy='.3em' fill='black'%3E☕%3C/text%3E%3C/svg%3E";
+                                        e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23fbb03b'/%3E%3Ctext x='50%25' y='48%25' font-family='Comic Sans MS' font-weight='bold' font-size='20' text-anchor='middle' dy='.3em' fill='black'%3EFUEL%3C/text%3E%3C/svg%3E";
                                     }}
                                 />
                             </div>
@@ -152,13 +159,13 @@ const AboutPanel = () => {
                             <p className="font-comic text-xl text-gray-800">
                                 Turning <span className="font-bold text-brown-800">caffeine</span> into clean, semantic code.<br />
                                 <span className="font-bold text-comic-red">Saving the web one div at a time!</span>
-                                <span className="ml-2 animate-pulse">💥</span>
+                                <Zap className="w-5 h-5 inline text-comic-red animate-pulse ml-2" strokeWidth={2.5} />
                             </p>
                         </div>
 
                         <div className="flex-shrink-0">
-                            <div className="font-comic text-4xl animate-bounce">
-                                🚀
+                            <div className="animate-bounce">
+                                <Rocket className="w-10 h-10 text-comic-red" strokeWidth={2.5} />
                             </div>
                         </div>
                     </div>
@@ -187,7 +194,10 @@ const AboutPanel = () => {
                             onClick={() => setIsRevealed(true)}
                             className="font-comic text-sm bg-black/10 border-2 border-dashed border-gray-400 px-4 py-2 text-gray-600 hover:bg-black/20 transition-all hover:scale-105 active:scale-95"
                         >
-                            🔍 Click to reveal secret identity...
+                            <span className="flex items-center gap-1.5 justify-center">
+                                <Search className="w-4 h-4 text-gray-500" strokeWidth={2.5} />
+                                Click to reveal secret identity...
+                            </span>
                         </button>
                     ) : (
                         /* The Revealed Image - Shown when isRevealed is true */

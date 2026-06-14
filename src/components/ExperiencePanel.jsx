@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ArrowLeft, ArrowRight, Rocket } from 'lucide-react';
 import ComicPanel from './ComicPanel';
 
 const ExperiencePanel = () => {
@@ -146,14 +147,15 @@ const ExperiencePanel = () => {
           <button
             onClick={() => setPage((p) => Math.max(p - 1, 0))}
             disabled={page === 0}
-            className={`font-comic px-4 py-2 border-4 border-black transition-all
+            className={`font-comic px-4 py-2 border-4 border-black transition-all flex items-center gap-1.5
               ${
                 page === 0
                   ? "bg-gray-300 text-gray-600 cursor-not-allowed"
-                  : "bg-comic-blue text-white hover:scale-105"
+                  : "bg-comic-blue text-white hover:scale-105 cursor-pointer"
               }`}
           >
-            ⬅ PREV
+            <ArrowLeft className="w-4 h-4 shrink-0" strokeWidth={2.5} />
+            <span>PREV</span>
           </button>
 
           <span className="font-comic text-lg bg-white border-4 border-black px-4 py-1">
@@ -165,14 +167,15 @@ const ExperiencePanel = () => {
               setPage((p) => Math.min(p + 1, totalPages - 1))
             }
             disabled={page === totalPages - 1}
-            className={`font-comic px-4 py-2 border-4 border-black transition-all
+            className={`font-comic px-4 py-2 border-4 border-black transition-all flex items-center gap-1.5
               ${
                 page === totalPages - 1
                   ? "bg-gray-300 text-gray-600 cursor-not-allowed"
-                  : "bg-comic-red text-white hover:scale-105"
+                  : "bg-comic-red text-white hover:scale-105 cursor-pointer"
               }`}
           >
-            NEXT ➡
+            <span>NEXT</span>
+            <ArrowRight className="w-4 h-4 shrink-0" strokeWidth={2.5} />
           </button>
         </div>
 
@@ -182,7 +185,7 @@ const ExperiencePanel = () => {
             <span className="font-comic text-xl text-white">
               JOURNEY CONTINUES...
             </span>
-            <span className="animate-bounce">🚀</span>
+            <Rocket className="w-5 h-5 text-white animate-bounce" strokeWidth={2.5} />
           </div>
         </div>
       </div>

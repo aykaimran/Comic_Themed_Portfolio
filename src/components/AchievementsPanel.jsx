@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Award, FileText, Medal, Trophy, Palette, Globe, GraduationCap, School, Zap, Rocket } from 'lucide-react';
 import ComicPanel from './ComicPanel';
 
 const AchievementsPanel = () => {
@@ -8,42 +9,42 @@ const AchievementsPanel = () => {
     {
       title: "DEPARTMENT TOPPER",
       description: "Secured first position and received a gold medal and cash prize for achieving the highest GPA in the Software Engineering Department. (2024)",
-      icon: "🥇🎓",
+      icon: Award,
       level: "LEGENDARY",
       color: "from-yellow-500 to-amber-500"
     },
     {
       title: "DEAN’S HONOR LIST",
       description: "Recognized for academic excellence (Spring 2024, Fall 2025 and Spring 2025).",
-      icon: "📜✨",
+      icon: FileText,
       level: "RARE",
       color: "from-blue-500 to-cyan-500"
     },
     {
       title: "MERIT SCHOLAR",
       description: "Merit-based scholarship holder (2019 – 2023)",
-      icon: "🎖️📚",
+      icon: Medal,
       level: "EPIC",
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "HIGH ACHIEVER",
       description: "Awarded 5 High Achiever Awards across O & A Levels",
-      icon: "🏆🔥",
+      icon: Trophy,
       level: "EPIC",
       color: "from-red-500 to-orange-500"
     },
     {
       title: "UI/UX CERTIFIED",
       description: "Advanced Graphic Designing & UI/UX Certification (2024)",
-      icon: "🎨🖌️",
+      icon: Palette,
       level: "RARE",
       color: "from-green-500 to-emerald-500"
     },
     {
       title: "LANGUAGE PROFICIENCY",
       description: "O-Level Certificate in French Language",
-      icon: "🇫🇷🗣️",
+      icon: Globe,
       level: "UNCOMMON",
       color: "from-indigo-500 to-violet-500"
     }
@@ -104,7 +105,7 @@ const AchievementsPanel = () => {
       timeline: "Aug 2023 – Present",
       details: "Currently in 6th semester with a GPA of 3.67/4.",
       decor: "border-comic-red bg-red-50/50",
-      sticker: "🎓"
+      sticker: GraduationCap
     },
     {
       institution: "Keynesian Institute of Management and Sciences (KIMS)",
@@ -112,7 +113,7 @@ const AchievementsPanel = () => {
       timeline: "2021 – 2023",
       details: "A-Levels: Computer Science (92% - 1012/1100 marks) | O-Levels: Sciences (92.44% - 832/900 marks).",
       decor: "border-comic-blue bg-blue-50/50",
-      sticker: "🏫"
+      sticker: School
     }
   ];
 
@@ -128,21 +129,22 @@ const AchievementsPanel = () => {
         <div>
           <div className="grid grid-cols-3 gap-2 mb-6">
             {[
-              { id: 'skills', label: '⚡ SKILLS', color: 'bg-comic-blue' },
-              { id: 'education', label: '🎓 EDUCATION', color: 'bg-comic-red' },
-              { id: 'achievements', label: '🏆 AWARDS', color: 'bg-comic-yellow text-black' }
+              { id: 'skills', label: 'SKILLS', icon: Zap, color: 'bg-comic-blue text-white' },
+              { id: 'education', label: 'EDUCATION', icon: GraduationCap, color: 'bg-comic-red text-white' },
+              { id: 'achievements', label: 'AWARDS', icon: Trophy, color: 'bg-comic-yellow text-black' }
             ].map(tab => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`font-comic py-2 border-3 border-black text-xs sm:text-sm transition-all hover:scale-105 cursor-pointer uppercase ${
+                className={`font-comic py-2 border-3 border-black text-xs sm:text-sm transition-all hover:scale-105 cursor-pointer uppercase flex items-center justify-center gap-1.5 ${
                   activeTab === tab.id
-                    ? `${tab.color} text-white shadow-comic-sm -translate-y-1`
+                    ? `${tab.color} shadow-comic-sm -translate-y-1`
                     : 'bg-white text-black hover:bg-gray-100'
                 }`}
                 style={{ color: activeTab === tab.id && tab.id === 'achievements' ? 'black' : undefined }}
               >
-                {tab.label}
+                <tab.icon className="w-4 h-4 shrink-0" strokeWidth={2.5} />
+                <span>{tab.label}</span>
               </button>
             ))}
           </div>
@@ -188,8 +190,8 @@ const AchievementsPanel = () => {
                     className={`relative border-4 border-black p-4 ${edu.decor} shadow-comic-sm transform ${index % 2 === 0 ? '-rotate-1' : 'rotate-1'} hover:rotate-0 transition-transform duration-300`}
                   >
                     {/* Sticker Badge */}
-                    <div className="absolute -top-3 -right-3 w-8 h-8 bg-white border-3 border-black rounded-full flex items-center justify-center text-lg shadow-comic-sm">
-                      {edu.sticker}
+                    <div className="absolute -top-3 -right-3 w-8 h-8 bg-white border-3 border-black rounded-full flex items-center justify-center shadow-comic-sm">
+                      <edu.sticker className="w-5 h-5 text-black" strokeWidth={2.5} />
                     </div>
                     <div className="font-comic text-xs uppercase text-gray-500 mb-1">{edu.timeline}</div>
                     <h4 className="font-comic text-xl text-black uppercase mb-1">{edu.institution}</h4>
@@ -209,7 +211,9 @@ const AchievementsPanel = () => {
                     className={`bg-gradient-to-br ${ach.color} border-4 border-black p-3 shadow-comic-sm hover:shadow-comic-lg transition-all duration-300 hover:scale-105 flex flex-col justify-between`}
                   >
                     <div>
-                      <div className="text-3xl mb-2 text-center">{ach.icon}</div>
+                      <div className="flex justify-center mb-2">
+                        <ach.icon className="w-10 h-10 text-white drop-shadow-md" strokeWidth={2.5} />
+                      </div>
                       <h4 className="font-comic text-lg uppercase text-white text-center mb-1 text-stroke-thin">
                         {ach.title}
                       </h4>
@@ -250,10 +254,11 @@ const AchievementsPanel = () => {
             </div>
           </div>
 
-          <div className="text-center mt-2">
+          <div className="text-center mt-2 flex items-center justify-center gap-1.5">
             <span className="font-comic text-xs text-yellow-300">
-              NEXT UNLOCK: FULL-TIME SOFTWARE ENGINEER 🚀
+              NEXT UNLOCK: FULL-TIME SOFTWARE ENGINEER
             </span>
+            <Rocket className="w-4 h-4 text-yellow-300 animate-bounce" strokeWidth={2.5} />
           </div>
         </div>
 
