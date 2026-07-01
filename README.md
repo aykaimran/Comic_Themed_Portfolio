@@ -2,7 +2,7 @@
 
 My portfolio website is now **live**! 🚀  
 
-🌐 Check it out here: [https://aykaimran.github.io/portfolio](https://github.com/aykaimran/Comic_Themed_Portfolio)  
+🌐 Check it out here: [https://aykaimran.github.io/portfolio](https://aykaimran.github.io/Comic_Themed_Portfolio/)
 
 ---
 
