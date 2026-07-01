@@ -66,7 +66,7 @@ const HomePanel = () => {
         <div className="md:w-1/2 flex justify-center items-center p-4">
           <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
             {/* Comic burst effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-red-400/20 rounded-full animate-pulse"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/15 to-red-400/15 rounded-full"></div>
 
             {/* Main mascot image */}
             <div className="relative z-10 w-full h-full">

@@ -54,10 +54,10 @@ const AboutPanel = () => {
                                     }}
                                 />
                                 {/* Code symbols floating around */}
-                                <div className="absolute -top-2 -left-2 z-20 font-mono bg-white border-2 border-black px-2 py-1 text-sm animate-bounce">
+                                <div className="absolute -top-2 -left-2 z-20 font-mono bg-white border-2 border-black px-2 py-1 text-sm">
                                     {"<div>"}
                                 </div>
-                                <div className="absolute -bottom-2 -right-2 z-20 font-mono bg-black text-white border-2 border-white px-2 py-1 text-sm animate-bounce delay-100">
+                                <div className="absolute -bottom-2 -right-2 z-20 font-mono bg-black text-white border-2 border-white px-2 py-1 text-sm">
                                     {"{}"}
                                 </div>
                             </div>
@@ -159,12 +159,12 @@ const AboutPanel = () => {
                             <p className="font-comic text-xl text-gray-800">
                                 Turning <span className="font-bold text-brown-800">caffeine</span> into clean, semantic code.<br />
                                 <span className="font-bold text-comic-red">Saving the web one div at a time!</span>
-                                <Zap className="w-5 h-5 inline text-comic-red animate-pulse ml-2" strokeWidth={2.5} />
+                                <Zap className="w-5 h-5 inline text-comic-red ml-2" strokeWidth={2.5} />
                             </p>
                         </div>
 
                         <div className="flex-shrink-0">
-                            <div className="animate-bounce">
+                            <div>
                                 <Rocket className="w-10 h-10 text-comic-red" strokeWidth={2.5} />
                             </div>
                         </div>

@@ -8,7 +8,7 @@ const ComicPanel = ({ children, className = "", title, variant = "normal" }) => 
       case "thought":
         return "border-4 border-dashed border-comic-blue bg-gradient-to-tr from-blue-50 to-white rounded-[50%]";
       case "action":
-        return "border-[5px] border-comic-yellow bg-gradient-to-r from-yellow-100 to-orange-50 animate-pulse";
+        return "border-[5px] border-comic-yellow bg-gradient-to-r from-yellow-100 to-orange-50";
       default:
         return "border-4 border-comic-black bg-white";
     }

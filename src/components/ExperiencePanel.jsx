@@ -9,38 +9,38 @@ const ExperiencePanel = () => {
       title: "MERN STACK INTERN",
       company: "Code5 Technologies · Lahore",
       description:
-        "Built admin dashboards and backend REST APIs. Integrated AI-powered resume generation using MERN stack with Flask + Ollama.",
+        "Developed an admin dashboard and backend REST APIs using Node.js, Express, and MongoDB Atlas. Built a Resume Builder web app with AI integration (React, Node.js, MongoDB, Flask, Ollama AI).",
       skills: ["React", "Node.js", "Express", "MongoDB", "Flask", "Ollama"],
       mascot: "/Comic_Themed_Portfolio/Mern_stack_Mascot.png",
       color: "from-red-500 to-orange-500"
     },
     {
       year: "Dec 2024 – Present",
-      title: "CODE MENTOR",
+      title: "INSTRUCTOR",
       company: "Polymath Kids · Lahore",
       description:
-        "Teaching C++ fundamentals and web development, guiding young minds through logic, problem-solving, and coding best practices.",
+        "Teach C++ fundamentals and Web Development course to young learners, guiding them through logic, problem-solving, and coding best practices.",
       skills: ["C++", "HTML", "CSS", "JavaScript", "Teaching"],
       mascot: "/Comic_Themed_Portfolio/Teacher_Mascot.png",
       color: "from-blue-500 to-purple-500"
     },
     {
-      year: "Aug 2025 – Present",
+      year: "Aug 2025 – Jun 2026",
       title: "LAB DEMONSTRATOR",
       company: "FAST-NUCES · Lahore",
       description:
-        "Assisting students in Assembly Language labs, debugging low-level logic, and strengthening core computing concepts.",
-      skills: ["Assembly Language", "Computer Architecture", "Debugging"],
+        "Conducted 50+ hands-on lab sessions for 80 students on 8086 Assembly language, microprocessor architecture, and computer organization. Achieved an average of 76% on lab assessments.",
+      skills: ["Assembly Language", "Computer Architecture", "Debugging", "8086"],
       mascot: "/Comic_Themed_Portfolio/Mern_stack_Mascot.png",
       color: "from-green-500 to-teal-500"
     },
     {
-      year: "Aug 2025 – Present",
-      title: "TEACHER ASSISTANT",
+      year: "Aug 2025 – Jun 2026",
+      title: "TEACHING ASSISTANT",
       company: "FAST-NUCES · Lahore",
       description:
-        "Assist students in understanding Database, Assembly Language and Digital Logic Design concepts.",
-      skills: ["Database", "Assembly Language", "Digital Logic Design"],
+        "Mentored and evaluated 140+ students in database design, SQL querying, data modeling, and digital logic design. Contributed to a 98% course pass rate.",
+      skills: ["Database", "SQL", "Digital Logic Design", "Data Modeling"],
       mascot: "/Comic_Themed_Portfolio/Teacher_Mascot.png",
       color: "from-yellow-500 to-amber-500"
     }
@@ -185,7 +185,7 @@ const ExperiencePanel = () => {
             <span className="font-comic text-xl text-white">
               JOURNEY CONTINUES...
             </span>
-            <Rocket className="w-5 h-5 text-white animate-bounce" strokeWidth={2.5} />
+            <Rocket className="w-5 h-5 text-white" strokeWidth={2.5} />
           </div>
         </div>
       </div>

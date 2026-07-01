@@ -15,7 +15,7 @@ const AchievementsPanel = () => {
     },
     {
       title: "DEAN’S HONOR LIST",
-      description: "Recognized for academic excellence (Spring 2024, Fall 2025 and Spring 2025).",
+      description: "Recognized for academic excellence across 7 consecutive semesters: Jun'23, Jan'24, Jun'24, Jan'25, Jun'25, Jan'26, Jun'26.",
       icon: FileText,
       level: "RARE",
       color: "from-blue-500 to-cyan-500"
@@ -29,7 +29,7 @@ const AchievementsPanel = () => {
     },
     {
       title: "HIGH ACHIEVER",
-      description: "Awarded 5 High Achiever Awards across O & A Levels",
+      description: "Received 5 High Achiever Awards (2018, 2019, 2021, 2022, 2023) across Grade 8, O-Level and A-Level.",
       icon: Trophy,
       level: "EPIC",
       color: "from-red-500 to-orange-500"
@@ -63,7 +63,9 @@ const AchievementsPanel = () => {
         { name: "JavaScript", level: 90 },
         { name: "SQL (PostgreSQL/MSSQL)", level: 88 },
         { name: "Assembly", level: 80 },
-        { name: "JUnit", level: 85 }
+        { name: "JUnit", level: 85 },
+        { name: "NumPy / Pandas", level: 82 },
+        { name: ".NET", level: 75 }
       ]
     },
     {
@@ -92,8 +94,8 @@ const AchievementsPanel = () => {
         { name: "JIRA / VS Code", level: 90 },
         { name: "MATLAB", level: 75 },
         { name: "Ubuntu Linux", level: 88 },
-        { name: "NLP", level: 82 },
-        { name: "Photoshop / Illustrator", level: 78 }
+        { name: "Selenium / Postman", level: 80 },
+        { name: "Canva / MS Office", level: 85 }
       ]
     }
   ];
@@ -103,7 +105,7 @@ const AchievementsPanel = () => {
       institution: "FAST-NUCES",
       degree: "Software Engineering Degree",
       timeline: "Aug 2023 – Present",
-      details: "Currently in 6th semester with a GPA of 3.67/4.",
+      details: "Bachelors in Software Engineering | CGPA: 3.7/4.0 | Dean's List: Jun'23, Jan'24, Jun'24, Jan'25, Jun'25, Jan'26, Jun'26",
       decor: "border-comic-red bg-red-50/50",
       sticker: GraduationCap
     },
@@ -243,7 +245,7 @@ const AchievementsPanel = () => {
 
           <div className="h-6 bg-gray-800 border-2 border-yellow-600 overflow-hidden">
             <div
-              className="h-full bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400 animate-pulse"
+              className="h-full bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400"
               style={{ width: '72%' }}
             >
               <div className="h-full flex items-center justify-end pr-2">
@@ -258,7 +260,7 @@ const AchievementsPanel = () => {
             <span className="font-comic text-xs text-yellow-300">
               NEXT UNLOCK: FULL-TIME SOFTWARE ENGINEER
             </span>
-            <Rocket className="w-4 h-4 text-yellow-300 animate-bounce" strokeWidth={2.5} />
+            <Rocket className="w-4 h-4 text-yellow-300" strokeWidth={2.5} />
           </div>
         </div>
 

@@ -9,7 +9,7 @@ import ContactPanel from './components/ContactPanel';
 export default function AppLayout() {
   return (
     
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-stone-100 to-amber-50 py-3 sm:py-6 md:py-8 lg:py-12 px-2 sm:px-4 comic-print">
+    <div className="min-h-screen bg-[#eeebe3] py-3 sm:py-6 md:py-8 lg:py-12 px-2 sm:px-4 comic-print">
       {/* Comic Dot Pattern Background */}
       <div className="fixed inset-0 pointer-events-none opacity-10 z-0" 
            style={{
@@ -28,14 +28,14 @@ export default function AppLayout() {
         <div className="absolute inset-0 bg-gradient-to-b from-white via-amber-50/20 to-white opacity-30 pointer-events-none z-10"></div>
         
         {/* Comic Header with Issue Info */}
-        <div className="border-b-4 sm:border-b-[8px] border-black bg-gradient-to-r from-comic-red via-comic-yellow to-comic-blue p-2 sm:p-3 px-4 sm:px-8 flex flex-col sm:flex-row justify-between items-center comic-header">
+        <div className="border-b-4 sm:border-b-[6px] border-[#1a1a1a] bg-gradient-to-r from-[#7a2218] via-[#8b6914] to-[#164f73] p-2 sm:p-3 px-4 sm:px-8 flex flex-col sm:flex-row justify-between items-center comic-header">
           <div className="font-comic text-sm sm:text-lg uppercase tracking-widest text-white text-stroke-sm flex items-center gap-3 mb-2 sm:mb-0">
             <span className="bg-black px-2 sm:px-4 py-1 sm:py-2 border-2 border-white">ISSUE #1</span>
             <span className="hidden md:inline text-xl">•</span>
             <span className="hidden md:inline text-lg">THE ORIGIN STORY</span>
           </div>
           <div className="font-comic text-xl sm:text-2xl md:text-3xl uppercase font-bold text-white text-stroke comic-title text-center">
-            <span className="bg-gradient-to-r from-white to-yellow-200 text-transparent bg-clip-text">AYKA IMRAN</span>
+            <span className="text-white">AYKA IMRAN</span>
             <span className="block text-base sm:text-lg md:text-xl mt-1">FULL-STACK DEVELOPER</span>
           </div>
           <div className="font-comic text-sm sm:text-lg uppercase tracking-widest text-white text-stroke-sm mt-2 sm:mt-0">
@@ -90,7 +90,7 @@ export default function AppLayout() {
             </div>
 
             {/* PANEL 7: FOOTER STATS */}
-            <div className="col-span-1 md:col-span-3 lg:col-span-4 min-h-fit md:min-h-[150px] comic-panel-frame mt-4 bg-gradient-to-r from-black via-gray-900 to-black animate-[pulse_3s_infinite]">
+            <div className="col-span-1 md:col-span-3 lg:col-span-4 min-h-fit md:min-h-[150px] comic-panel-frame mt-4 bg-gradient-to-r from-[#1a1a1a] via-[#2c2c2c] to-[#1a1a1a]">
               <div className="relative h-full p-4 md:p-6">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-full">
                   <div className="text-center border-r-2 border-gray-700 pr-4 flex flex-col justify-center">
@@ -129,7 +129,7 @@ export default function AppLayout() {
               <span className="text-comic-yellow">PUBLISHER:</span> AYKA STUDIOS
             </div>
             <div className="font-comic text-lg sm:text-xl md:text-2xl uppercase font-bold text-white text-center">
-              <span className="animate-pulse flex items-center gap-2">
+              <span className="flex items-center gap-2">
                 <span className="text-comic-red">TO</span>
                 <span className="text-comic-yellow">BE</span>
                 <span className="text-comic-blue">CONTINUED</span>

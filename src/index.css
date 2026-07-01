@@ -4,18 +4,19 @@
   --font-comic: "Bangers", "Comic Neue", "Impact", system-ui, sans-serif;
   --font-dialogue: "Bubblegum Sans", "Comic Sans MS", cursive;
   
-  --color-comic-red: #ea3323;
-  --color-comic-yellow: #fbb03b;
-  --color-comic-blue: #00aeef;
-  --color-comic-black: #000000;
-  --color-comic-paper: #fffaf0;
+  /* Muted, human-feeling palette */
+  --color-comic-red: #b03a2e;
+  --color-comic-yellow: #c9950a;
+  --color-comic-blue: #1f6fa0;
+  --color-comic-black: #1a1a1a;
+  --color-comic-paper: #f5f2eb;
 
-  /* Enhanced comic shadows */
-  --shadow-comic: 8px 8px 0px 0px #000;
-  --shadow-comic-sm: 4px 4px 0px 0px #000;
-  --shadow-comic-lg: 12px 12px 0px 0px #000;
-  --shadow-comic-xl: 16px 16px 0px 0px #000;
-  --shadow-comic-inner: inset 4px 4px 8px rgba(0,0,0,0.2);
+  /* Comic shadows — slightly softer */
+  --shadow-comic: 6px 6px 0px 0px #1a1a1a;
+  --shadow-comic-sm: 3px 3px 0px 0px #1a1a1a;
+  --shadow-comic-lg: 10px 10px 0px 0px #1a1a1a;
+  --shadow-comic-xl: 14px 14px 0px 0px #1a1a1a;
+  --shadow-comic-inner: inset 3px 3px 6px rgba(0,0,0,0.15);
   
   /* Comic animations */
   --animate-pow: pow 0.3s ease-out;
@@ -29,7 +30,7 @@
   font-weight: 400;
 
   color-scheme: light;
-  color: black;
+  color: #1a1a1a;
   background-color: var(--color-comic-paper);
 
   font-synthesis: none;
@@ -41,32 +42,33 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, #f5f5f5 25%, #e0e0e0 25%, #e0e0e0 50%, #f5f5f5 50%, #f5f5f5 75%, #e0e0e0 75%);
-  background-size: 40px 40px;
+  background-color: #eeebe3;
+  background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.06) 1px, transparent 0);
+  background-size: 24px 24px;
   background-attachment: fixed;
 }
 
 /* Comic Book Text Effects */
 .text-stroke {
-  -webkit-text-stroke: 2px black;
-  text-shadow: 4px 4px 0px #000;
+  -webkit-text-stroke: 2px #1a1a1a;
+  text-shadow: 3px 3px 0px #1a1a1a;
   paint-order: stroke fill;
 }
 
 .text-stroke-sm {
-  -webkit-text-stroke: 1px black;
-  text-shadow: 2px 2px 0px #000;
+  -webkit-text-stroke: 1px #1a1a1a;
+  text-shadow: 2px 2px 0px #1a1a1a;
 }
 
 .text-stroke-thin {
-  -webkit-text-stroke: 0.5px black;
-  text-shadow: 1px 1px 0px #000;
+  -webkit-text-stroke: 0.5px #1a1a1a;
+  text-shadow: 1px 1px 0px #1a1a1a;
 }
 
 /* Comic Panel Effects */
 .comic-panel-frame {
   position: relative;
-  border: 6px solid black;
+  border: 5px solid #1a1a1a;
   box-shadow: var(--shadow-comic);
   background: white;
 }
@@ -74,15 +76,15 @@ body {
 .comic-panel-frame::before {
   content: '';
   position: absolute;
-  inset: -4px;
-  border: 2px solid rgba(0,0,0,0.1);
+  inset: -3px;
+  border: 1px solid rgba(0,0,0,0.08);
   pointer-events: none;
   z-index: 1;
 }
 
 .comic-panel-frame-wide {
   position: relative;
-  border: 6px solid black;
+  border: 5px solid #1a1a1a;
   box-shadow: var(--shadow-comic);
   background: white;
 }
@@ -138,19 +140,12 @@ body {
     transparent 100%);
 }
 
+/* Comic title — no looping glow */
 .comic-title {
-  animation: comic-glow 2s ease-in-out infinite alternate;
+  /* Animation removed for a more restrained, human feel */
 }
 
 /* Comic Animations */
-@keyframes comic-glow {
-  from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--color-comic-yellow);
-  }
-  to {
-    text-shadow: 0 0 10px #fff, 0 0 20px var(--color-comic-yellow), 0 0 30px var(--color-comic-red);
-  }
-}
 
 @keyframes pow {
   0% { transform: scale(1); }
@@ -167,7 +162,7 @@ body {
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-8px); }
 }
 
 @keyframes page-turn {
@@ -180,7 +175,7 @@ body {
 .speech-bubble {
   position: relative;
   background: white;
-  border: 3px solid black;
+  border: 3px solid #1a1a1a;
   border-radius: 20px;
   padding: 1rem;
   box-shadow: var(--shadow-comic-sm);
@@ -192,7 +187,7 @@ body {
   bottom: -15px;
   left: 20%;
   border: 10px solid transparent;
-  border-top-color: black;
+  border-top-color: #1a1a1a;
 }
 
 .speech-bubble::before {
@@ -208,7 +203,7 @@ body {
 .thought-bubble {
   position: relative;
   background: white;
-  border: 3px solid black;
+  border: 3px solid #1a1a1a;
   border-radius: 50%;
   padding: 1rem;
   box-shadow: var(--shadow-comic-sm);
@@ -219,7 +214,7 @@ body {
   content: '';
   position: absolute;
   background: white;
-  border: 2px solid black;
+  border: 2px solid #1a1a1a;
   border-radius: 50%;
 }
 
@@ -260,22 +255,22 @@ body {
 
 /* Custom Scrollbar Comic Style */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: linear-gradient(180deg, var(--color-comic-red), var(--color-comic-yellow), var(--color-comic-blue));
-  border: 2px solid black;
+  background: #d6d3cc;
+  border: 1px solid #aaa9a4;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: black;
-  border: 2px solid var(--color-comic-yellow);
+  background: #555450;
+  border: 1px solid #aaa9a4;
   border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-comic-red);
+  background: #3a3835;
 }
 
 /* Shine animation for progress bars */
@@ -290,21 +285,21 @@ body {
 
 /* Form focus effects */
 input:focus, textarea:focus {
-  box-shadow: 0 0 0 3px rgba(0, 174, 239, 0.3);
-  transform: translateY(-2px);
+  box-shadow: 0 0 0 3px rgba(31, 111, 160, 0.2);
+  transform: translateY(-1px);
 }
 
 /* Status indicators */
 .status-active {
-  box-shadow: 0 0 15px rgba(72, 187, 120, 0.5);
+  box-shadow: 0 0 10px rgba(72, 187, 120, 0.3);
 }
 
 .status-completed {
-  box-shadow: 0 0 15px rgba(66, 153, 225, 0.5);
+  box-shadow: 0 0 10px rgba(66, 153, 225, 0.3);
 }
 
 .status-in-progress {
-  box-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
+  box-shadow: 0 0 10px rgba(201, 149, 10, 0.3);
 }
 
 /* Tech badge hover effect */
@@ -345,11 +340,11 @@ input:focus, textarea:focus {
   animation: transmit 2s infinite;
 }
 
-/* Achievement glow */
+/* Achievement glow — softened */
 .achievement-glow {
   box-shadow: 
-    0 0 20px rgba(251, 176, 59, 0.3),
-    inset 0 0 20px rgba(255, 255, 255, 0.1);
+    0 0 12px rgba(201, 149, 10, 0.2),
+    inset 0 0 12px rgba(255, 255, 255, 0.08);
 }
 
 /* Mobile optimizations */

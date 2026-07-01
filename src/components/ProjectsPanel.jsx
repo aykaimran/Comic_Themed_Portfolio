@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ExternalLink } from 'lucide-react';
 import ComicPanel from './ComicPanel';
 
 const ProjectsPanel = () => {
@@ -13,6 +14,7 @@ const ProjectsPanel = () => {
       status: "COMPLETED",
       tech: ["Python", "Scikit-learn", "OpenCV", "SVM", "Random Forest", "XGBoost"],
       impact: "Achieved 88.6% accuracy on 20k+ images",
+      deployedUrl: null,
       color: "from-green-500 to-emerald-600"
     },
     {
@@ -23,8 +25,9 @@ const ProjectsPanel = () => {
       description:
         "An AI-powered browser extension that detects cookie consent banners and extracts privacy policy text in real time. Generates clear, plain-English summaries highlighting tracking, data sharing, and privacy risks before user consent. Provides concise alerts and detailed visual insights (e.g., data flow maps) to help users make informed, privacy-safe decisions.",
       status: "COMPLETED",
-      tech: ["JavaScript", "Python", "HTML", "CSS", "Browser Extension APIs", "NLP Models"],
-      impact: "Real-time privacy analysis and flow maps",
+      tech: ["JavaScript", "Chrome Extension API", "Selenium", "DOM Monitoring", "Keyword Heuristics"],
+      impact: "Automated cookie banner detection with minimal false positives",
+      deployedUrl: null,
       color: "from-yellow-400 to-amber-500"
     },
     {
@@ -34,9 +37,10 @@ const ProjectsPanel = () => {
       year: "2026",
       description:
         "A web-based event management system that helps users plan and organize events in one platform. It supports event creation, guest list management, budget and expense tracking, vendor browsing, invitation card generation, and automated email sending to guests. Designed to simplify event planning through a centralized and user-friendly dashboard.",
-      status: "COMPLETED",
+      status: "DEPLOYED",
       tech: ["React.js", "Node.js", "Express.js", "MongoDB", "HTML", "CSS", "Nodemailer"],
       impact: "Centralized planning and guest tracking",
+      deployedUrl: "https://eventease-xi.vercel.app/",
       color: "from-pink-500 to-purple-500"
     },
     {
@@ -49,6 +53,7 @@ const ProjectsPanel = () => {
       status: "COMPLETED",
       tech: ["Python", "BERT", "NLP", "Machine Learning"],
       impact: "Automated disease prediction from reports",
+      deployedUrl: null,
       color: "from-red-400 to-pink-500"
     },
     {
@@ -61,6 +66,7 @@ const ProjectsPanel = () => {
       status: "COMPLETED",
       tech: ["Java", "Java Swing", "PostgreSQL"],
       impact: "Interactive learning for digital logic",
+      deployedUrl: null,
       color: "from-indigo-500 to-purple-500"
     },
     {
@@ -73,6 +79,7 @@ const ProjectsPanel = () => {
       status: "COMPLETED",
       tech: ["Spring Boot (Java)", "React.js", "MySQL"],
       impact: "Reduced manual errors by ~50%",
+      deployedUrl: null,
       color: "from-blue-500 to-cyan-500"
     },
     {
@@ -81,10 +88,11 @@ const ProjectsPanel = () => {
       type: "AI Full-Stack Platform",
       year: "2025",
       description:
-        "AI-powered resume builder with real-time preview, PDF export, authentication, and content generation.",
+        "Designed a full-stack platform enabling users to generate, edit, and download resumes with AI-powered content suggestions via Ollama. Features real-time preview, PDF export, and authentication.",
       status: "COMPLETED",
-      tech: ["React", "TypeScript", "Node.js", "MongoDB", "Flask", "Ollama"],
+      tech: ["React", "TypeScript", "Node.js", "MongoDB", "Flask", "Ollama AI"],
       impact: "Automated resume creation with AI",
+      deployedUrl: null,
       color: "from-orange-500 to-red-500"
     },
     {
@@ -97,18 +105,20 @@ const ProjectsPanel = () => {
       status: "COMPLETED",
       tech: ["C++", "SQL", ".NET Framework"],
       impact: "Optimized household energy usage",
+      deployedUrl: null,
       color: "from-yellow-400 to-amber-500"
     },
     {
       id: 9,
       title: "FINAL YEAR PROJECT",
-      type: "Capstone / Research Project",
+      type: "R&D",
       year: "2026",
       description:
         "A large-scale final year project focused on advanced problem-solving and real-world impact. Project details are intentionally kept confidential.",
       status: "IN_PROGRESS",
       tech: ["AI", "Full-Stack", "Research", "System Design"],
-      impact: "Confidential — to be revealed upon completion",
+      impact: "Confidential - to be revealed upon completion!",
+      deployedUrl: null,
       color: "from-gray-700 to-black"
     }
   ];
@@ -227,10 +237,24 @@ const ProjectsPanel = () => {
                   )}
                 </div>
 
-                {/* Action Button */}
-                <button className="w-full bg-gradient-to-r from-comic-blue to-cyan-600 text-white font-comic py-2 border-2 border-black hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
-                  VIEW MISSION
-                </button>
+                {/* Action Buttons */}
+                <div className="flex flex-col gap-2">
+                  <button className="w-full bg-gradient-to-r from-comic-blue to-cyan-600 text-white font-comic py-2 border-2 border-black hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+                    VIEW MISSION
+                  </button>
+                  {project.deployedUrl && (
+                    <a
+                      href={project.deployedUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="w-full bg-gradient-to-r from-emerald-600 to-green-700 text-white font-comic py-2 border-2 border-black hover:from-green-700 hover:to-emerald-800 transition-all duration-300 flex items-center justify-center gap-2"
+                    >
+                      <ExternalLink className="w-4 h-4" strokeWidth={2.5} />
+                      VISIT LIVE SITE
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}
@@ -279,6 +303,17 @@ const ProjectsPanel = () => {
                     ))}
                   </div>
                 </div>
+                {selectedProject.deployedUrl && (
+                  <a
+                    href={selectedProject.deployedUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 w-full bg-gradient-to-r from-emerald-600 to-green-700 text-white font-comic py-2 px-4 border-2 border-black hover:from-green-700 hover:to-emerald-800 transition-all duration-300 flex items-center justify-center gap-2"
+                  >
+                    <ExternalLink className="w-4 h-4" strokeWidth={2.5} />
+                    VISIT LIVE SITE
+                  </a>
+                )}
               </div>
             </div>
           </div>

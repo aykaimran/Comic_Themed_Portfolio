@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Globe, Send, CheckCircle2 } from 'lucide-react';
+import { Mail, Globe, Send, CheckCircle2, Phone } from 'lucide-react';
 import ComicPanel from './ComicPanel';
 
 const GithubIcon = (props) => (
@@ -42,6 +42,14 @@ const ContactPanel = () => {
       color: "bg-red-500"
     },
     {
+      platform: "PHONE",
+      label: "Call or WhatsApp me",
+      url: "tel:+923121411733",
+      copyText: "0312-1411733",
+      icon: Phone,
+      color: "bg-emerald-600"
+    },
+    {
       platform: "GITHUB",
       label: "Peek into my code lair",
       url: "https://github.com/aykaimran",
@@ -60,8 +68,8 @@ const ContactPanel = () => {
     {
       platform: "PORTFOLIO",
       label: "Visit my hero portfolio",
-      url: "https://aykaimran.github.io/portfolio/",
-      copyText: "https://aykaimran.github.io/portfolio/",
+      url: "https://aykaimran.github.io/Comic_Themed_Portfolio/",
+      copyText: "https://aykaimran.github.io/Comic_Themed_Portfolio/",
       icon: Globe,
       color: "bg-purple-500"
     }
